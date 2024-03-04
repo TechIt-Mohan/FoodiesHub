@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -140,3 +141,37 @@ from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: "danger",
 }
+
+# Email Configuration
+ 
+#EMAIL_HOST= 'smtp.gmail.com'
+#EMAIL_PORT= 587
+#EMAIL_HOST_USER= 'yadavmohan1493@gmail.com'
+#EMAIL_HOST_PASSWORD= 'Mohan@1493'
+#EMAIL_USE_TLS= True
+#DEFAULT_FROM_EMAIL = 'FoodiesHub <yadavmohan1493@gmail.com>'
+
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = 'yadavmohan1493@gmail.com'
+#EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Use environment variables in your settings
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = 'yadavmohan1493@gmail.com'
+#EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+#
+## Ensure EMAIL_HOST_PASSWORD is set
+#if not EMAIL_HOST_PASSWORD:
+#    raise ValueError('EMAIL_HOST_PASSWORD environment variable is not set')
