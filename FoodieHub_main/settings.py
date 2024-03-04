@@ -64,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'accounts.context_processors.get_vendor',
             ],
         },
     },
@@ -159,19 +160,19 @@ MESSAGE_TAGS = {
 #EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 import os
-from dotenv import load_dotenv
+#from dotenv import load_dotenv
 
 # Load environment variables from .env file
-load_dotenv()
+#load_dotenv()
 
 # Use environment variables in your settings
-#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-#EMAIL_HOST = 'smtp.gmail.com'
-#EMAIL_PORT = 587
-#EMAIL_USE_TLS = True
-#EMAIL_HOST_USER = 'yadavmohan1493@gmail.com'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'yadavmohan1493@gmail.com'
 #EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-#
-## Ensure EMAIL_HOST_PASSWORD is set
+EMAIL_HOST_PASSWORD= 'Raison@1410'
+# Ensure EMAIL_HOST_PASSWORD is set
 #if not EMAIL_HOST_PASSWORD:
-#    raise ValueError('EMAIL_HOST_PASSWORD environment variable is not set')
+    #raise ValueError('EMAIL_HOST_PASSWORD environment variable is not set')
