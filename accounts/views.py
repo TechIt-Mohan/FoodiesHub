@@ -159,7 +159,7 @@ def logout(request):
     messages.info(request, 'You are logged out.')
     return redirect('login')
 
-@login_required(login_url=login)
+@login_required(login_url='login')
 def myAccount(request):
     user = request.user
     redirectUrl = detectUser(user)
