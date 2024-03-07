@@ -65,6 +65,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'accounts.context_processors.get_vendor',
+                'accounts.context_processors.get_google_api',
             ],
         },
     },
@@ -176,3 +177,5 @@ EMAIL_HOST_PASSWORD= 'Raison@1410'
 # Ensure EMAIL_HOST_PASSWORD is set
 #if not EMAIL_HOST_PASSWORD:
     #raise ValueError('EMAIL_HOST_PASSWORD environment variable is not set')
+
+GOOGLE_API_KEY = 'AIzaSyCqc10DREaQ3huX8d1lD7aUJNHpYzq4Evc'
